@@ -1,5 +1,7 @@
+#!/bin/bash
+
 # remove old executable
-rm ./testing
+rm -f testing.exe
 
 # compile
 make
