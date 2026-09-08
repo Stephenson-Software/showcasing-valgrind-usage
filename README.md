@@ -15,7 +15,7 @@ make
 ```
 bash cr.sh
 ```
-The script removes any old executable, runs `make`, and then runs `testing.exe` under valgrind, writing the report to `valgrind-output.txt`.
+The script checks that valgrind is installed, removes any old executable, runs `make`, and then runs `testing.exe` under valgrind, writing the report to `valgrind-output.txt`. It stops at the first failed step, so a compile error is reported instead of being scrolled past.
 
 ## Toggling the Leak
 `Leaker::createStrings()` allocates 10,000 strings with `new` and never frees them. Uncommenting `// delete s;` at `src/testing.cpp:15` fixes the leak; commenting it out again restores it.
