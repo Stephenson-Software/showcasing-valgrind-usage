@@ -5,8 +5,8 @@ set -e
 
 # make sure valgrind is installed before anything is built
 if ! command -v valgrind > /dev/null; then
-    echo "valgrind was not found on this machine."
-    echo "The dev container in .devcontainer/ installs valgrind and grants the SYS_PTRACE capability it needs."
+    echo "valgrind was not found on this machine." >&2
+    echo "The dev container in .devcontainer/ installs valgrind and grants the SYS_PTRACE capability it needs." >&2
     exit 1
 fi
 
